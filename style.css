@@ -1,0 +1,155 @@
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc !important; /* Soft light gray canvas */
+    color: #1e293b !important;            /* Dark slate text */
+}
+
+/* hide Streamlit branding */
+#MainMenu, footer, header { visibility: hidden; }
+
+/* ── Page title ───────────────────────────────────────────────────────────── */
+.page-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+}
+
+/* ── KPI cards ────────────────────────────────────────────────────────────── */
+.kpi-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.kpi-card {
+    flex: 1 1 180px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.kpi-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #64748b; /* Muted gray-blue label */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+}
+
+.kpi-value {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+}
+
+.kpi-delta {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background-color: #ffffff !important;
+    border-right: 1px solid #e2e8f0;
+}
+
+.sidebar-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1rem 0;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #4f46e5; /* Primary accent */
+    object-fit: cover;
+}
+
+.sidebar-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #0f172a;
+}
+
+.sidebar-email {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* Hr rule overrides inside light sidebar */
+[data-testid="stSidebar"] hr {
+    border-color: #e2e8f0 !important;
+}
+
+/* ── Login page ───────────────────────────────────────────────────────────── */
+.login-container {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+}
+
+.login-logo {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.login-subtitle {
+    color: #64748b;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.google-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background: #ffffff;
+    color: #1f2937 !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.75rem 2rem;
+    border-radius: 10px;
+    text-decoration: none !important;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s, transform 0.15s;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.google-btn:hover {
+    box-shadow: 0 4px 16px rgba(79, 70, 229, 0.15);
+    transform: translateY(-1px);
+}
+
+/* ── Plotly chart containers ──────────────────────────────────────────────── */
+.js-plotly-plot .plotly .main-svg {
+    border-radius: 12px;
+}
+
+/* ── Dataframe ────────────────────────────────────────────────────────────── */
+[data-testid="stDataFrame"] {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
