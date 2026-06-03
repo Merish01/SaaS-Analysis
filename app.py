@@ -5,6 +5,16 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime, timedelta
 from auth import login_page, logout, is_authenticated, get_user_info
+# TEMPORARY DEBUG - remove after fixing
+import streamlit as st
+st.write("### Debug Info")
+try:
+    st.write("client_id:", st.secrets["google"]["client_id"][:20] + "...")
+    st.write("redirect_uri:", st.secrets["google"]["redirect_uri"])
+    st.write("secret exists:", True)
+except Exception as e:
+    st.write("SECRET ERROR:", str(e))
+st.stop()
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
